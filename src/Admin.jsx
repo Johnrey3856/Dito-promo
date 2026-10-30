@@ -707,7 +707,7 @@ export default function Admin({ demo }) {
 
   const signOut = async () => { await adminLogout(); setState('gate'); };
   if (state === 'checking') return <div className="sx-gate"><div className="sx-loading"><span /> Checking access…</div></div>;
-  if (state === 'nosb') return <div className="sx-gate"><div className="sx-gate-card"><div className="sx-logo big"><ShieldAlert size={30} /></div><h1>Supabase not connected</h1><p className="sx-sub">Add your keys to <code>.env</code> and restart. You can still preview the design with sample data.</p><a className="sx-btn wide" href="#/admin/demo">Open demo</a></div></div>;
+  if (state === 'nosb') return <div className="sx-gate"><div className="sx-gate-card"><div className="sx-logo big"><ShieldAlert size={30} /></div><h1>Supabase not connected</h1><p className="sx-sub">Add <code>VITE_SUPABASE_URL</code> and <code>VITE_SUPABASE_ANON_KEY</code> — in <code>.env</code> locally, or in Vercel → Settings → Environment Variables — then rebuild. You can still preview the design with sample data.</p><a className="sx-btn wide" href="#/admin/demo">Open demo</a></div></div>;
   if (state === 'gate' || state === 'denied') return <Gate denied={state === 'denied'} onSignOut={signOut} onDone={n => { setWho(n); setState('in'); }} />;
   return <Dashboard who={who} demo={demo} onLogout={demo ? () => { location.hash = '#/admin'; } : signOut} />;
 }

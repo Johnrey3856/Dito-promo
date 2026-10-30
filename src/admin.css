@@ -240,3 +240,6 @@
   .sx-modal .sx-d-body{grid-template-columns:1fr}.sx-modal .sx-d-body h4.first{margin-top:22px}
   .sx-foot-live{display:none}
 }
+
+/* the public site's big negative letter-spacing on h1 must not leak into the admin screens */
+.sx-app h1,.sx-gate h1{letter-spacing:-.4px;line-height:1.15}
