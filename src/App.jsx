@@ -214,7 +214,7 @@ export default function App() {
 
       <section className="cta-section" id="help"><div><p className="eyebrow">READY WHEN YOU ARE</p><h2>Let's get you<br/>connected.</h2><p>Start exploring and find the offer that fits your day.</p></div><button className="light-btn" onClick={()=>openAuth('register')}>Join the community <ArrowRight size={18}/></button><div className="cta-orb"></div></section>
     </main>}
-    <footer><a className="brand footer-brand" href="#home"><span className="brand-icon"><Wifi size={21}/></span><span>DITO<span className="brand-dot">.</span></span></a><span>© 2026 DITO promo concept. Independent demo website.</span><div><a href="#offers">Promos</a><a href="#why">About</a><a href="#/admin">Admin</a><button onClick={()=>openAuth('login')}>Log in</button></div></footer>
+    <footer><a className="brand footer-brand" href="#home"><span className="brand-icon"><Wifi size={21}/></span><span>DITO<span className="brand-dot">.</span></span></a><span>© 2026 DITO promo concept. Independent demo website.</span><div><a href="#offers">Promos</a><a href="#why">About</a><button onClick={()=>openAuth('login')}>Log in</button></div></footer>
     {modal && <AuthModal mode={modal} onClose={()=>setModal('')} onSwitch={setModal} onSuccess={setUser}/>}
   </div>
 }
